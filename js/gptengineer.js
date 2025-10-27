@@ -4,15 +4,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
 
-    // Create header
+    if (!root) {
+        console.error('Root element not found!');
+        return;
+    }
+
+    // Create and append header
     const header = document.createElement('header');
     header.innerHTML = `
-        <a href="#">Rifton x UGPhone</a>
         <a href="#" class="redeem-btn">Redeem</a>
     `;
     root.appendChild(header);
 
-    // Create main content
+    // Create and append main content
     const main = document.createElement('main');
     main.innerHTML = `
         <div class="logo">R</div>
